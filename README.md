@@ -67,7 +67,15 @@ I listed the Amazon links in the .cpp file if you want to buy the parts. These a
    - Connect the positive terminal to ESP32 GPIO 5
    - Connect the negative terminal to ESP32 GND
 
-6. Flash the ESP32 with the provided code
+6. Flash the ESP32 with the provided code:
+
+   ```
+   git clone https://github.com/ramborogers/rfhunter.git
+   cd rfhunter
+   pio run -t upload
+   ```
+   >**You shouldn't need to change any of the code.**
+
 7. Snap the case together
 
 <img src= finalv4.jpg>
