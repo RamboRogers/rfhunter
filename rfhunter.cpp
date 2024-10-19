@@ -44,8 +44,7 @@ Wiring Guide for RF Signal Scanner:
 
 Power Circuit:
 1. Battery (3.7V) positive terminal -> Power Switch
-2. Power Switch -> TP4056 Charge Controller (B+)
-3. TP4056 OUT+ -> ESP32 VIN and Boost Converter IN+
+2. Power Switch -> ESP32 5v VIN and Boost Converter IN+
 4. Boost Converter OUT+ (adjusted to 9V) -> AD8317 VCC
 5. Battery negative terminal -> TP4056 B- and ESP32 GND and Boost Converter IN-
 6. Boost Converter OUT- -> AD8317 GND

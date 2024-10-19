@@ -2,7 +2,7 @@
 
 This project is an RF Signal Scanner built using an ESP32, AD8317 RF detector, and various other components. It's designed to detect and measure RF signals in the environment and display the signal strength on an OLED display. It's useful to find hidden cameras, wiretapping devices, and other RF-enabled devices.
 
-<center><img src="finalv4.jpg" alt="RFHunter V4.0" width="50%">
+<center><img src="v4.gif" alt="RFHunter V4.0" width="50%">
 </center>
 
 ## Ready for Primetime
@@ -44,9 +44,13 @@ I listed the Amazon links in the .cpp file if you want to buy the parts. These a
 
 1. Assemble the power circuit:
    - Connect the battery to the TP4056 charge controller
-   - Connect the TP4056 output to the power switch
-   - Connect the power switch output to the ESP32 VIN and boost converter input
+   - Connect the out from theTP4056 output to the power switch
+   - Connect the power switch output to the ESP32 5v VIN and boost converter input
    - Adjust the boost converter output to 9V
+
+  > Make sure the boost converter is set to 9V. If you don't have a 9V battery, you can use a 9V battery.
+
+  > Make sure you use the 5V VIN and not the 3.3V VIN.
 
 2. Connect the AD8317 RF detector:
    - Power the AD8317 with the 9V output from the boost converter
@@ -130,3 +134,9 @@ If you build your own RF Signal Scanner based on this project, we'd love to see 
 Happy building!
 
 Matthew Rogers
+
+> The best idea for a date, his and hers RF Hunters!
+
+<center>
+<img src="v4date.gif" alt="RFHunter V4.0" width="50%">
+</center>
