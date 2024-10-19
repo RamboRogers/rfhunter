@@ -12,6 +12,9 @@ Code is property of Matthew Rogers, 2024 matthewrogers.org
 This code is free to use under the GNU GPLv3 license.
 
 https://x.com/rogerscissp
+
+2024-10-19 V4.01 - Added a display recovery mechanism in case the display is not found on startup.
+
 */
 
 /*
@@ -115,15 +118,38 @@ void setup() {
   delay(1000);
   Serial.println(F("\n\nRF Signal Scanner - ESP32 with AD8317"));
 
+  // Initialize I2C communication for the display
   Wire.begin(OLED_SDA, OLED_SCL);
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;);
+
+  // Try to initialize the display multiple times if needed
+  bool displayInitialized = false;
+  for (int attempt = 0; attempt < 3 && !displayInitialized; attempt++) {
+    if (display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+      displayInitialized = true;
+    } else {
+      Serial.println(F("SSD1306 allocation failed, retrying..."));
+      // Perform a soft reset by reinitializing I2C
+      Wire.end();
+      delay(100);
+      Wire.begin(OLED_SDA, OLED_SCL);
+      delay(100);
+    }
   }
 
-  display.clearDisplay();
-  display.setTextSize(1);
-  display.setTextColor(SSD1306_WHITE);
+  if (!displayInitialized) {
+    Serial.println(F("SSD1306 allocation failed after multiple attempts"));
+    // You can decide to continue or halt the program here
+  } else {
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setTextColor(SSD1306_WHITE);
+
+    // Display initialization success message
+    display.setCursor(0, 0);
+    display.println(F("Display initialized"));
+    display.display();
+    delay(1000);
+  }
 
   pinMode(RF_SENSOR_PIN, INPUT);
   pinMode(POT_PIN, INPUT);
@@ -157,6 +183,7 @@ void setup() {
 
   Serial.println(F("Setup complete"));
 }
+
 
 void loop() {
   int baselineRange = getBaselineRange();
