@@ -5,10 +5,12 @@ This project is an RF Signal Scanner built using an ESP32, AD8317 RF detector, a
 <center><img src="v4.gif" alt="RFHunter V4.0" width="50%">
 </center>
 
+See the video here: https://x.com/rogerscissp/status/1847721651359850985
+
 ## Ready for Primetime
 
 
-This video had V3 which required a 9V battery and an external USB Power Supply. V4 here snaps together with zero tools, has space in the bottom for a battery, and a charge controller, and in place of the 9V batter you have a boost converter.  Now you only need 1 battery, and it should last weeks or months depending on usage cycles.
+V4 here snaps together with zero tools, has space in the bottom for a battery, and a charge controller, and in place of the 9V batter you have a boost converter.  Now you only need 1 battery, and it should last weeks or months depending on usage cycles.
 
 <center><img src="parts.jpg" alt="Parts" width="50%"></center>
 
@@ -48,7 +50,7 @@ I listed the Amazon links in the .cpp file if you want to buy the parts. These a
    - Connect the power switch output to the ESP32 5v VIN and boost converter input
    - Adjust the boost converter output to 9V
 
-  > Make sure the boost converter is set to 9V. If you don't have a 9V battery, you can use a 9V battery.
+  > Make sure the boost converter is set to 9V. If you don't have a boost converter, you can use a 9V battery.
 
   > Make sure you use the 5V VIN and not the 3.3V VIN.
 
