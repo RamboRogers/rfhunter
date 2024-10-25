@@ -10,7 +10,7 @@ See the video here: https://x.com/rogerscissp/status/1847721651359850985
 ## Ready for Primetime
 
 
-V4 here snaps together with zero tools, has space in the bottom for a battery, and a charge controller, and in place of the 9V batter you have a boost converter.  Now you only need 1 battery, and it should last weeks or months depending on usage cycles.
+V4 here snaps together with zero tools, has space in the bottom for a battery, and a charge controller, and in place of the 9V battery you have a boost converter.  Now you only need 1 battery, and it should last weeks or months depending on usage cycles.
 
 <center><img src="parts.jpg" alt="Parts" width="50%"></center>
 
