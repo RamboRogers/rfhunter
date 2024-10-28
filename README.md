@@ -7,10 +7,18 @@ This project is an RF Signal Scanner built using an ESP32, AD8317 RF detector, a
 
 See the video here: https://x.com/rogerscissp/status/1847721651359850985
 
+## Updates
+2024-10-28 RFHunter hit #1 on hackernews this week!
+<center><img src="hackernews1.png" alt="Hacker News" width="50%"></center>
+
+I've have a number of interesting products in the works.  I'll share more details soon.
+
+> **Note:** I've had some interesting comments under the issues section of this repo.  If you're making one of these you may want to look. It was suggest you could modif this board to not need a boost converter.  I've not tried this yet but I may give it a shot.  If you do please let me know how it goes.
+
 ## Ready for Primetime
 
 
-V4 here snaps together with zero tools, has space in the bottom for a battery, and a charge controller, and in place of the 9V batter you have a boost converter.  Now you only need 1 battery, and it should last weeks or months depending on usage cycles.
+V4 here snaps together with zero tools, has space in the bottom for a battery, and a charge controller, and in place of the 9V battery you have a boost converter.  Now you only need 1 battery, and it should last weeks or months depending on usage cycles.
 
 <center><img src="parts.jpg" alt="Parts" width="50%"></center>
 
