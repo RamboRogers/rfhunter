@@ -8,6 +8,12 @@ This project is an RF Signal Scanner built using an ESP32, AD8317 RF detector, a
 See the video here: https://x.com/rogerscissp/status/1847721651359850985
 
 ## Updates
+
+2024-10-30 First Tag from the Wild! [RFHunter on X](https://x.com/LukeSwitzer_/status/1851430655499919486)
+
+<center><img src="tagged.jpg" width="50%"></center>
+
+
 2024-10-28 RFHunter hit #1 on hackernews this week!
 <center><img src="hackernews1.png" alt="Hacker News" width="50%"></center>
 
